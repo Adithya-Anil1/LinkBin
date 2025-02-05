@@ -29,13 +29,33 @@ h2 {
 
 .input-group {
     width: 100%;
-    margin-bottom: 8px; /* Reduced spacing */
+    padding: 0 12px;
+    margin-bottom: 10px;
 }
 
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+button#saveUrl {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Remove conflicting select styles */
 select {
     width: 100%;
-    padding: 6px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 button {
@@ -54,13 +74,11 @@ button:hover {
 }
 
 .saved-urls {
-    margin-top: 5px; /* Reduced margin */
-    max-height: 150px; /* Limit height to enable scrolling */
+    width: calc(100% - 24px);
+    max-height: 250px; /* Height to fit 5 items */
     overflow-y: auto;
-    background: #444;
-    padding: 8px;
-    border-radius: 8px;
-    width: 100%;
+    margin-top: 16px;
+    padding: 0 12px;
 }
 
 ul {
@@ -71,15 +89,13 @@ ul {
 
 li {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 6px;
-    background: #555;
-    margin-bottom: 4px;
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-    overflow: hidden;
+    justify-content: space-between;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    height: 40px; /* Fixed height for each item */
 }
 
 li .url {
@@ -89,6 +105,14 @@ li .url {
     text-overflow: ellipsis;
     color: #a3d5ff;
     text-decoration: none;
+    flex-grow: 1; /* Allows URL to take up available space */
+}
+
+li .category {
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-right: 12px;  /* Increased spacing between category and URL */
+    text-transform: capitalize; /* Capitalize first letter of category */
 }
 
 li .url:hover {
@@ -97,10 +121,37 @@ li .url:hover {
 
 .delete-btn {
     background: #ff5f5f;
-    padding: 4px 8px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 4px;
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    flex-shrink: 0;
 }
 
 .delete-btn:hover {
     background: #e53e3e;
+}
+
+/* Scrollbar styling */
+.saved-urls::-webkit-scrollbar {
+    width: 6px;
+}
+
+.saved-urls::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.saved-urls::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.saved-urls::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
