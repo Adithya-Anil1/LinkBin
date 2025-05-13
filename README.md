@@ -1,4 +1,4 @@
-# Shop Keeper Chrome Extension
+# LinkBin Chrome Extension
 
 A Chrome extension that helps you save and organize URLs with a Windows File Explorer-like folder structure.
 
