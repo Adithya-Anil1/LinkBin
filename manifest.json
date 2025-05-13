@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Resource Keeper",
+    "version": "2.0",
+    "description": "Save URLs of resources for later use.",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/16.png",
+            "48": "icons/url64.png",
+            "128": "icons/url128.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}

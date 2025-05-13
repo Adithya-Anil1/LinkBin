@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Resource Keeper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Folders</h3>
+                <div class="add-folder-section">
+                    <input type="text" id="newFolderNameInput" placeholder="New folder name">
+                    <button id="addFolderButton" title="Add new folder" class="icon-button">+</button>
+                </div>
+            </div>
+            <ul id="folderList">
+                <!-- Folder items will be dynamically populated here -->
+                <!-- Example:
+                <li class="folder-item active" data-folder-id="folder_uuid_1">
+                    <span class="folder-name-display">Research Papers</span>
+                    <div class="folder-item-actions">
+                        <button class="rename-folder-btn icon-button" title="Rename folder">✏️</button>
+                        <button class="delete-folder-btn icon-button" title="Delete folder">🗑️</button>
+                    </div>
+                </li>
+                -->
+            </ul>
+            <p id="noFoldersMessage" class="empty-state-message" style="display: none;">Create a folder to get started.</p>
+        </div>
+
+        <div class="main-content">
+            <div class="main-content-header">
+                <h3 id="currentFolderNameDisplay">No folder selected</h3>
+                <div class="save-resource-section">
+                    <input type="text" id="newResourceNameInput" placeholder="Enter a name for this resource">
+                    <button id="saveUrlButton" title="Save current page to this folder">Save Resource</button>
+                </div>
+            </div>
+            <ul id="resourceList">
+                <!-- Resource items will be dynamically populated here -->
+                <!-- Example:
+                <li class="resource-item" data-resource-id="url_uuid_1" data-url="http://example.com/ai-ethics">
+                    <div class="resource-info">
+                        <a href="http://example.com/ai-ethics" target="_blank" class="resource-link" title="http://example.com/ai-ethics">AI Ethics Overview (Custom Name)</a>
+                        <span class="resource-domain">example.com</span>
+                        <span class="resource-date">Added: May 14, 2024</span>
+                    </div>
+                    <div class="resource-item-actions">
+                        <button class="rename-resource-btn icon-button" title="Rename resource">✏️</button>
+                        <button class="delete-resource-btn icon-button" title="Delete resource">🗑️</button>
+                    </div>
+                </li>
+                -->
+            </ul>
+            <p id="noResourcesMessage" class="empty-state-message" style="display: none;">This folder is empty.</p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
