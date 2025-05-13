@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Resource Keeper",
+    "name": "LinkBin",
     "version": "2.0",
     "description": "Save URLs of resources for later use.",
     "permissions": ["storage", "tabs"],
