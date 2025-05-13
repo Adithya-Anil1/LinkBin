@@ -3,29 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Keeper</title>
+    <title>Study Resource Keeper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <div class="container">
-        <h2>Shop Keeper</h2>
+        <h2>Resource Keeper</h2>
+                
         <div class="input-group">
             <label for="category">Category:</label>
             <select id="category">
-                <option value="Electronics">Electronics</option>
-                <option value="Fashion">Fashion</option>
-                <option value="Groceries">Groceries</option>
-                <option value="Books">Books</option>
-                <option value="Home">Home</option>
-                <option value="Health">Health</option>
-                <option value="Shoes">Shoes</option>
+                <option value="">Select Category</option>
+                <option value="Course">Course Material</option>
+                <option value="Tutorial">Tutorial</option>
+                <option value="Documentation">Documentation</option>
+                <!-- Custom categories will be added here -->
+                <option value="custom">Add Custom Category...</option>
             </select>
         </div>
-        <button id="saveUrl">Save URL</button>
-        <div class="saved-urls">
-            <ul id="urlList"></ul>
+        <div class="custom-category" style="display: none;">
+            <input type="text" id="customCategory" placeholder="Enter Custom Category">
         </div>
+
+        <button id="saveUrl">Save Resource</button>
     </div>
+
+    <hr>
+
+    <ul id="urlList">
+        <!-- Saved URLs will be listed here -->
+    </ul>
+    <p id="noResults" style="display: none; text-align: center; margin-top: 10px;">No resources found.</p>
+</div>
     <script src="popup.js"></script>
 </body>
 </html>

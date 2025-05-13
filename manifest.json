@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Resource Saver",
+    "name": "Study Resource Keeper",
     "version": "1.0",
-    "description": "Save URLs of shopping items",
+    "description": "Save and organize URLs of study resources and learning materials",
     "permissions": ["storage", "tabs"],
     "host_permissions": ["<all_urls>"],
     "action": {
